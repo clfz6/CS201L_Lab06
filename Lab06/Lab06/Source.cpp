@@ -1,3 +1,5 @@
+//Cristian Lopez
+
 #include<iostream>
 #include "Calculations.h"
 #include<stdexcept>
