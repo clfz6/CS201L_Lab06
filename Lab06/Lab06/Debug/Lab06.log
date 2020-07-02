@@ -1,0 +1,5 @@
+﻿  Calculations.cpp
+  Source.cpp
+C:\c++\CS201L\CS201L_Lab06\Lab06\Lab06\Source.cpp(9,7): warning C4101: 'userInput': unreferenced local variable
+  Generating Code...
+  Lab06.vcxproj -> C:\c++\CS201L\CS201L_Lab06\Lab06\Debug\Lab06.exe
