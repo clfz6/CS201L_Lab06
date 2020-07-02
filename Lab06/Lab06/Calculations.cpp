@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<double> gallons, miles;
+
 
 double GetMiles()
 {
@@ -27,7 +27,6 @@ double GetMiles()
 			if (userInput < 0)
 				throw runtime_error("Miles cannot be less than 0.");
 			valid = true;
-			miles.push_back(userInput);
 		}
 		catch (runtime_error& excpt)
 		{
@@ -57,7 +56,6 @@ double GetGallons()
 			if (userInput < 0)
 				throw runtime_error("Gallons cannot be less than 0.");
 			valid = true;
-			gallons.push_back(userInput);
 		}
 		catch (runtime_error& excpt)
 		{
@@ -69,7 +67,30 @@ double GetGallons()
 }
 double GetMPG(vector<double> miles, vector<double> gallons)
 {
-	double mpg = 0;
+	double mpg = 0, totalMiles = 0, totalGallons = 0;
+	int size;
+
+	try
+	{
+		if (miles.size() == 0 || gallons.size() == 0)
+		{
+			throw runtime_error("No values recorded MPG is nan");
+		}
+
+		size = miles.size();
+
+		for (int i = 0; i < size; i++)
+		{
+			totalMiles += miles[i];
+			totalGallons += gallons[i];
+		}
+		mpg = totalMiles / totalGallons;
+	}
+	catch (runtime_error& excpt)
+	{
+		cout << excpt.what() << endl;
+	}
+
 	return mpg;
 
 }
