@@ -11,13 +11,13 @@ int main()
 	bool quit = false, valid = false;
 	vector<double> gallons, miles;
 
-	while (quit == false)
+	while (quit == false) //Loops through main menu
 	{
-		while (valid == false)
+		while (valid == false) //Testing for valid input
 		{
 			try
 			{
-				cout << "\nPress 'L' to log new miles and gallons for your vehicle." << endl
+				cout << "\nPress 'L' to log another tank for your vehicle." << endl
 					<< "Or press 'Q' to quit and view the fuel economy of your vehicle. >> ";
 				cin >> userInput;
 				upperInput = toupper(userInput);

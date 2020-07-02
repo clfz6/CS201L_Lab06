@@ -7,7 +7,7 @@ using namespace std;
 
 
 
-double GetMiles()
+double GetMiles() //Asks user to input miles
 {
 	double userInput;
 	bool valid = false;
@@ -18,7 +18,7 @@ double GetMiles()
 		{
 			cout << "How many miles? ";
 			cin >> userInput;
-			if (cin.fail())
+			if (cin.fail()) //Testing input
 			{
 				cin.clear();
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -36,7 +36,7 @@ double GetMiles()
 
 	return userInput;
 }
-double GetGallons()
+double GetGallons() //Asks user to input gallons
 {
 	double userInput;
 	bool valid = false;
@@ -47,7 +47,7 @@ double GetGallons()
 		{
 			cout << "How many gallons? ";
 			cin >> userInput;
-			if (cin.fail())
+			if (cin.fail()) //Testing input
 			{
 				cin.clear();
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -65,7 +65,7 @@ double GetGallons()
 
 	return userInput;
 }
-double GetMPG(vector<double> miles, vector<double> gallons)
+double GetMPG(vector<double> miles, vector<double> gallons) //Calculates mpg using the collected data
 {
 	double mpg = 0, totalMiles = 0, totalGallons = 0;
 	int size;
@@ -79,7 +79,7 @@ double GetMPG(vector<double> miles, vector<double> gallons)
 
 		size = miles.size();
 
-		for (int i = 0; i < size; i++)
+		for (int i = 0; i < size; i++) //Adding up all the elements from the vectors
 		{
 			totalMiles += miles[i];
 			totalGallons += gallons[i];
